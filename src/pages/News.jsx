@@ -40,7 +40,7 @@ const News = () => {
   if (loading) return <p className="text-center mt-10"><Loader /></p>;
 
   return (
-    <div className="max-w-7xl mx-auto px-4 mt-20">
+    <div className="max-w-7xl mx-auto px-4 mt-28">
       <h1 className="text-2xl sm:text-3xl font-bold mb-8 text-center">Latest Crypto News</h1>
       <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 mb-10">
         {articles.map((item, index) => (

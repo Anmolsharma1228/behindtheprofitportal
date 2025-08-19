@@ -13,7 +13,7 @@ const fadeInUp = {
 
 const Home = () => {
   return (
-    <div className="min-h-screen flex flex-col mt-12">
+    <div className="min-h-screen flex flex-col mt-16">
       {/* Main Content */}
       <main className="flex-grow w-full mx-auto">
       <section className="space-y-10">
@@ -24,7 +24,7 @@ const Home = () => {
     initial="hidden"
     whileInView="visible"
     viewport={{ once: true }}
-    className='mt-10'
+    className='mt-10 mx-2'
   >
     <h2 className="text-2xl sm:text-3xl font-bold text-white">Decode the market with Behind The Profit</h2>
     {/* <h3 className="text-xl sm:text-2xl text-white mt-2">Real-time data, insights, and analysis</h3> */}
