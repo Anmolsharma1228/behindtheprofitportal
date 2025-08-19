@@ -1,55 +1,46 @@
+// components/WhyUs.jsx
 import React from "react";
-import { BarChart3, ShieldCheck, UserCog, Headset, Users } from "lucide-react";
+import { TrendingUp, ShieldCheck, BarChart3 } from "lucide-react";
 
 const WhyUs = () => {
   const features = [
     {
-      icon: <BarChart3 className="w-10 h-10 text-red-500" />,
-      title: "100% Research-Backed Insights",
-      desc: "We provide market insights backed by deep research and expert analysis.",
+      icon: <TrendingUp className="text-green-400 w-8 h-8" />,
+      title: "Proven Strategies",
+      desc: "We use research-backed strategies to help maximize your profits in all market conditions.",
     },
     {
-      icon: <ShieldCheck className="w-10 h-10 text-green-500" />,
-      title: "Transparent & Ethical Approach",
-      desc: "Our strategies are built on honesty, ethics, and complete transparency.",
+      icon: <ShieldCheck className="text-yellow-400 w-8 h-8" />,
+      title: "Trusted & Secure",
+      desc: "Your data and investments are protected with industry-standard security measures.",
     },
     {
-      icon: <UserCog className="w-10 h-10 text-blue-500" />,
-      title: "Personalized Strategies",
-      desc: "Tailored investment strategies for every type of investor.",
-    },
-    {
-      icon: <Headset className="w-10 h-10 text-yellow-500" />,
-      title: "Dedicated Support",
-      desc: "Get guidance via calls, messages, and detailed reports.",
-    },
-    {
-      icon: <Users className="w-10 h-10 text-purple-500" />,
-      title: "Trusted Community",
-      desc: "Join a growing community of investors who trust our platform.",
+      icon: <BarChart3 className="text-blue-400 w-8 h-8" />,
+      title: "Real-Time Insights",
+      desc: "Access up-to-date market news, analysis, and tools to make smarter decisions.",
     },
   ];
 
   return (
-    <section className="bg-gray-900 text-white py-16">
-      <div className="max-w-6xl mx-auto px-6 text-center">
-        <h2 className="text-3xl md:text-4xl font-bold mb-12">
-          Why Choose <span className="text-red-500">Us?</span>
-        </h2>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {features.map((item, index) => (
-            <div
-              key={index}
-              className="p-6 bg-gray-800 rounded-2xl shadow-lg hover:shadow-xl transition-transform transform hover:-translate-y-2"
-            >
-              <div className="flex justify-center mb-4">{item.icon}</div>
-              <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
-              <p className="text-gray-400 text-sm">{item.desc}</p>
-            </div>
-          ))}
-        </div>
+    <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 className="text-3xl font-bold text-yellow-400 mb-10">
+        Why Choose <span className="text-white">Behind The Profit?</span>
+      </h2>
+      <div className="grid md:grid-cols-3 gap-8">
+        {features.map((item, idx) => (
+          <div
+            key={idx}
+            className="bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-yellow-500/20 transition"
+          >
+            <div className="flex justify-center mb-4">{item.icon}</div>
+            <h3 className="text-xl font-semibold text-white mb-2">
+              {item.title}
+            </h3>
+            <p className="text-gray-400">{item.desc}</p>
+          </div>
+        ))}
       </div>
-    </section>
+    </div>
   );
 };
 
