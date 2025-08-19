@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+:root {
+  font-family: sans;
+  color-scheme: light dark;
+  /* color: rgba(255, 255, 255, 0.87); */
+  background-color: #f6f0f0c4;
+}
+
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
