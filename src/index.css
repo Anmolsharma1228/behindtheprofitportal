@@ -3,7 +3,8 @@
 :root {
   font-family: sans;
   color-scheme: light dark;
-  background-color: rgba(0, 0, 0, 0.986);
+  /* background-color: rgba(0, 0, 0, 0.986); */
+    background: linear-gradient(to right, black, #0f172a, black);
 }
 
 

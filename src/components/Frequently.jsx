@@ -18,7 +18,7 @@ const Frequently = () => {
   };
 
   return (
-    <div className="max-w-3xl mx-auto px-4 py-8">
+    <div className="max-w-3xl mx-auto px-4 py-8 text-white">
       <h2 className="flex justify-center text-3xl font-bold text-center mb-6"><Pin className='text-[red] size-[40px] rotate-[45deg]'/> Frequently Asked Questions</h2>
 
       {faqs.map((faq, index) => (
@@ -36,7 +36,7 @@ const Frequently = () => {
               openIndex === index ? 'max-h-40 opacity-100 mt-2' : 'max-h-0 opacity-0'
             }`}
           >
-            <p className="text-gray-600">{faq.answer}</p>
+            <p className="text-gray-500">{faq.answer}</p>
           </div>
         </div>
       ))}

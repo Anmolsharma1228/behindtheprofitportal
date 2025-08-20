@@ -12,19 +12,7 @@ const News = () => {
     const fetchNews = async () => {
       try {
         const res = await axios.get(
-          "https://news-api65.p.rapidapi.com/api/v1/crypto/articles",
-          {
-            params: {
-              format: "json",
-              time_frame: "24h",
-              page: 1,
-              limit: 9,
-            },
-            headers: {
-              "x-rapidapi-key": "53856e8622mshf4f81d1d7f29d55p14114fjsn82cac1895aed",
-              "x-rapidapi-host": "news-api65.p.rapidapi.com",
-            },
-          }
+          "https://finnhub.io/api/v1/news?category=general&token=d2is489r01qqoaj8d1d0d2is489r01qqoaj8d1dg"
         );
         setArticles(res.data);
       } catch (error) {
@@ -56,31 +44,31 @@ const News = () => {
         {/* Image with overlay */}
         <div className="relative">
           <img
-            src={item.media[0]}
+            src={item.image}
             alt={item.title}
             className="w-full h-40 object-cover"
           />
           <div className="absolute inset-0 bg-black bg-opacity-40 opacity-0 
                           hover:opacity-100 flex items-center justify-center transition">
             <span className="text-white text-lg font-semibold px-3 text-center">
-              {item.title}
+              {item.headline}
             </span>
           </div>
         </div>
 
         {/* Card content */}
-        <div className="p-5 flex flex-col h-[280px]">
-          <div className="flex items-center text-gray-400 text-sm mb-2">
+        <div className="p-5 flex flex-col h-[200px]">
+          {/* <div className="flex items-center text-gray-400 text-sm mb-2">
             <FaClock className="mr-2 text-red-400" />
-            <span>{new Date(item.published).toLocaleString()}</span>
-          </div>
+            <span>{new Date(item.datetime).toLocaleString()}</span>
+          </div> */}
           <h3 className="font-bold text-lg mb-3 text-white">{item.title}</h3>
           <p className="text-gray-300 text-sm mb-4 line-clamp-3">
             {item.summary}
           </p>
 
           <Link
-            to={item.link}
+            to={item.url}
             target="_blank"
             className="text-center w-[150px] mt-auto inline-block 
                        bg-gradient-to-r from-red-600 to-red-400 

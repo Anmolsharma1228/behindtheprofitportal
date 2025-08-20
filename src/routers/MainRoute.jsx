@@ -17,7 +17,7 @@ const MainRoute = () => {
     <Navbar />
     <Suspense fallback={<Loader />}>
      <Routes>
-      <Route  index path='/' element={<Home/>}></Route>
+      <Route index path='/' element={<Home/>}></Route>
       <Route path='/About' element={<About/>}></Route>
       <Route path='/News' element={<News/>}></Route>
       <Route path='/Learn' element={<Learn/>}></Route>

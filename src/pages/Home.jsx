@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import stock from '../assets/Images/stock2.avif';
 import WhyUs from '../components/WhyUs';
+import Service from '../components/Service';
 import { Marquees } from '../components/Marquees';
 
 const fadeInUp = {
@@ -56,6 +57,9 @@ const Home = () => {
         <section className="bg-gray-900 py-6">
           <Marquees />
         </section>
+
+        {/* Service Section */}
+        <Service />
 
         {/* Why Us Section */}
         <section className="bg-neutral-950 py-12">
