@@ -28,7 +28,7 @@ const News = () => {
   if (loading) return <p className="text-center mt-10"><Loader /></p>;
 
   return (
-  <div className="max-w-7xl mx-auto px-4 mt-28">
+  <div className="max-w-7xl mx-auto px-4 mt-38">
   <h1 className="text-2xl sm:text-3xl font-bold mb-8 text-center text-red-500">
     Latest Crypto News
   </h1>

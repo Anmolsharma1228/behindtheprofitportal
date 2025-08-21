@@ -4,22 +4,26 @@ import { FaBars } from "react-icons/fa";
 import { ImCross } from "react-icons/im";
 import { Phone } from "lucide-react";
 import { MarqueeHeadline } from "./Marquees";
+import logo1 from '../assets/Images/logo1.png'
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="bg-gradient-to-r from-black via-[#0f172a] to-black w-full fixed top-0 right-0 left-0 mx-auto z-10 py-[14px] shadow-md">
+    <header className="bg-gradient-to-r from-black via-[#0f172a] to-black w-full fixed top-0 right-0 left-0 mx-auto z-10 h-[100px] md:h-[120px] shadow-md">
       <MarqueeHeadline />
       <nav className="flex justify-between items-center mx-4">
         {/* Logo */}
-        <div>
-          <NavLink to="#">
-            <p className="text-[#FFD700] text-xl font-serif font-semibold text-center">
-              PROFIT
-            </p>
-          </NavLink>
-        </div>
+<div className="flex items-center">
+  <NavLink to="/">
+    <img 
+      src={logo1} 
+      alt="Logo" 
+      className="w-[80px] sm:w-[120px] h-auto object-contain" 
+    />
+  </NavLink>
+</div>
+      
 
         {/* Mobile Toggle */}
         <div className="text-white sm:hidden text-[20px]">

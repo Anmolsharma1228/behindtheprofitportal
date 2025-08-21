@@ -105,7 +105,7 @@ const Learn = () => {
   );
 
   return (
-  <div className="p-4 max-w-5xl mx-auto mt-26 min-h-screen">
+  <div className="p-4 max-w-5xl mx-auto mt-38 min-h-screen">
   <h1 className="flex justify-center text-3xl font-bold mb-6 text-center text-red-500">
     <Book className="text-red-500 size-[40px] stroke-3"/> Learn About the Stock Market
   </h1>
