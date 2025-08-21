@@ -85,54 +85,56 @@ export const Navbar = () => {
       </nav>
 
       {/* Mobile Menu */}
-      <div
-        className={`sm:hidden overflow-hidden transition-all duration-500 ease-in-out ${
-          isOpen ? "max-h-60 opacity-100" : "max-h-0 opacity-0"
-        }`}
-      >
-        <div className="text-white ml-4 flex flex-col items-start justify-start space-y-2 py-2 lg:text-[18px]">
-          <NavLink
-            to="/"
-            className={({ isActive }) =>
-              isActive
-                ? "text-[#FFD700]"
-                : "text-white hover:text-[#FFD700] transition-colors duration-300"
-            }
-          >
-            Home
-          </NavLink>
-          <NavLink
-            to="/News"
-            className={({ isActive }) =>
-              isActive
-                ? "text-[#FFD700]"
-                : "text-white hover:text-[#FFD700] transition-colors duration-300"
-            }
-          >
-            News & Insight
-          </NavLink>
-          <NavLink
-            to="/Learn"
-            className={({ isActive }) =>
-              isActive
-                ? "text-[#FFD700]"
-                : "text-white hover:text-[#FFD700] transition-colors duration-300"
-            }
-          >
-            Learn
-          </NavLink>
-          <NavLink
-            to="/About"
-            className={({ isActive }) =>
-              isActive
-                ? "text-[#FFD700]"
-                : "text-white hover:text-[#FFD700] transition-colors duration-300"
-            }
-          >
-            About Us
-          </NavLink>
-        </div>
-      </div>
+<div
+  className={`sm:hidden absolute top-[100px] left-0 w-full transition-all duration-500 ease-in-out ${
+    isOpen ? "max-h-60 opacity-100" : "max-h-0 opacity-0"
+  } overflow-hidden bg-gradient-to-r from-black via-[#0f172a] to-black z-20`}
+>
+  <div className="text-white ml-10 flex flex-col items-start justify-start space-y-2 py-2 lg:text-[18px]">
+    <NavLink
+      to="/"
+      className={({ isActive }) =>
+        isActive
+          ? "text-[#FFD700]"
+          : "text-white hover:text-[#FFD700] transition-colors duration-300"
+      }
+    >
+      Home
+    </NavLink>
+    <NavLink
+      to="/News"
+      className={({ isActive }) =>
+        isActive
+          ? "text-[#FFD700]"
+          : "text-white hover:text-[#FFD700] transition-colors duration-300"
+      }
+    >
+      News & Insight
+    </NavLink>
+    <NavLink
+      to="/Learn"
+      className={({ isActive }) =>
+        isActive
+          ? "text-[#FFD700]"
+          : "text-white hover:text-[#FFD700] transition-colors duration-300"
+      }
+    >
+      Learn
+    </NavLink>
+    <NavLink
+      to="/About"
+      className={({ isActive }) =>
+        isActive
+          ? "text-[#FFD700]"
+          : "text-white hover:text-[#FFD700] transition-colors duration-300"
+      }
+    >
+      About Us
+    </NavLink>
+  </div>
+</div>
+
+   
     </header>
   );
 };
