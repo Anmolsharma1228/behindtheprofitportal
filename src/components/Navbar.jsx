@@ -4,7 +4,7 @@ import { FaBars } from "react-icons/fa";
 import { ImCross } from "react-icons/im";
 import { Phone } from "lucide-react";
 import { MarqueeHeadline } from "./Marquees";
-import logo1 from '../assets/Images/logo1.png'
+import logo2 from '../assets/Images/logo2.png'
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -17,7 +17,7 @@ export const Navbar = () => {
 <div className="flex items-center">
   <NavLink to="/">
     <img 
-      src={logo1} 
+      src={logo2} 
       alt="Logo" 
       className="w-[80px] sm:w-[120px] h-auto object-contain" 
     />
