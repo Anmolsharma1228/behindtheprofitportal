@@ -6,6 +6,7 @@ import {
   FaInstagram,
 } from "react-icons/fa";
 import { Phone, Mail, MapPin, Instagram } from "lucide-react";
+import logo2 from '../assets/Images/logo2.png'
 
 export default function Footer() {
   return (
@@ -15,9 +16,10 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10 border-b border-gray-800 pb-10">
           {/* Logo & About */}
           <div>
-            <h2 className="text-2xl font-bold text-yellow-400">
+            {/* <h2 className="text-2xl font-bold text-yellow-400">
               BehindTheProfit
-            </h2>
+            </h2> */}
+            <img src={logo2} className="ml-[-43px] w-[80px] sm:w-[120px] h-auto object-contain" />
             <p className="mt-4 text-sm text-gray-400 leading-relaxed">
               Your trusted source for{" "}
               <span className="text-green-400">market updates</span>,{" "}
