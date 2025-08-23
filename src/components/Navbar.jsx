@@ -8,18 +8,17 @@ import logo2 from '../assets/Images/logo2.png'
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-
   return (
     <header className="bg-gradient-to-r from-black via-[#0f172a] to-black w-full fixed top-0 right-0 left-0 mx-auto z-10 h-[100px] md:h-[120px] shadow-md">
       <MarqueeHeadline />
       <nav className="flex justify-between items-center mx-4">
         {/* Logo */}
-<div className="flex items-center">
+<div className="flex items-center ml-[-28px]">
   <NavLink to="/">
     <img 
       src={logo2} 
       alt="Logo" 
-      className="w-[80px] sm:w-[120px] h-auto object-contain" 
+      className="w-[100px] sm:w-[130px] h-auto object-contain" 
     />
   </NavLink>
 </div>
@@ -90,7 +89,7 @@ export const Navbar = () => {
     isOpen ? "max-h-60 opacity-100" : "max-h-0 opacity-0"
   } overflow-hidden bg-gradient-to-r from-black via-[#0f172a] to-black z-20`}
 >
-  <div className="text-white ml-10 flex flex-col items-start justify-start space-y-2 py-2 lg:text-[18px]">
+  <div className="text-white ml-5 flex flex-col items-start justify-start space-y-2 py-2 lg:text-[18px]">
     <NavLink
       to="/"
       className={({ isActive }) =>

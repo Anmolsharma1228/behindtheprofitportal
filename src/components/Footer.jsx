@@ -19,7 +19,7 @@ export default function Footer() {
             {/* <h2 className="text-2xl font-bold text-yellow-400">
               BehindTheProfit
             </h2> */}
-            <img src={logo2} className="md:ml-[-43px] w-[80px] sm:w-[120px] h-auto object-contain" />
+            <img src={logo2} className="ml-[-28px] md:ml-[-70px] w-[100px] sm:w-[130px] h-auto object-contain" />
             <p className="mt-4 text-sm text-gray-400 leading-relaxed">
               Your trusted source for{" "}
               <span className="text-green-400">market updates</span>,{" "}

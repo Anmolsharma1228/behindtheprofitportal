@@ -12,7 +12,7 @@ const fadeInUp = {
 
 const Home = () => {
   return (
-    <div className="min-h-screen flex flex-col mt-16">
+    <div className="min-h-screen flex flex-col mt-22">
       {/* Main Content */}
       <main className="flex-grow w-full mx-auto">
         <section className="space-y-10">
