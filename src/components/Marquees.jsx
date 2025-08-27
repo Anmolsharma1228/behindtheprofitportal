@@ -5,32 +5,59 @@ import Marquee from "react-fast-marquee";
 export const Marquees = () => {
   const [stocks, setStocks] = useState([]);
 
+  const symbols = ["AAPL", "MSFT", "TSLA", "AMZN", "GOOGL"];
+
   useEffect(() => {
-    const fetchstock = async () => {
+    const fetchStocks = async () => {
       try {
-        const response = await axios.get(
-          "https://finnhub.io/api/v1/stock/peers?symbol=AAPL&token=d2is489r01qqoaj8d1d0d2is489r01qqoaj8d1dg"
+        const results = await Promise.all(
+          symbols.map((symbol) =>
+            axios.get(
+              `https://finnhub.io/api/v1/quote?symbol=${symbol}&token=d2is489r01qqoaj8d1d0d2is489r01qqoaj8d1dg`
+            )
+          )
         );
-        setStocks(response.data);
-        console.log(response.data);
+
+        // Format data as {symbol, currentPrice, change, percent}
+        const formatted = results.map((res, idx) => ({
+          symbol: symbols[idx],
+          price: res.data.c,
+          change: res.data.d,
+          percent: res.data.dp,
+        }));
+
+        setStocks(formatted);
       } catch (error) {
-        console.log("stock not found", error);
+        console.error("Error fetching stocks:", error);
       }
     };
-    fetchstock();
+
+    fetchStocks();
   }, []);
 
   return (
     <div className="bg-gray-900 py-3">
-      <Marquee gradient={false} speed={50}>
-        {stocks.map((stock, idx) => (
-          <div
-            key={idx}
-            className="mx-6 font-semibold text-yellow-400"
-          >
-            {stock}
-          </div>
-        ))}
+      <Marquee gradient={false} speed={60}>
+        {stocks.length > 0 ? (
+          stocks.map((stock, idx) => (
+            <div
+              key={idx}
+              className="mx-6 font-semibold text-yellow-400 flex items-center space-x-2"
+            >
+              <span>{stock.symbol}:</span>
+              <span>${stock.price.toFixed(2)}</span>
+              <span
+                className={
+                  stock.change >= 0 ? "text-green-400" : "text-red-400"
+                }
+              >
+                {stock.change} ({stock.percent}%)
+              </span>
+            </div>
+          ))
+        ) : (
+          <span className="text-white">Loading stock data...</span>
+        )}
       </Marquee>
     </div>
   );
