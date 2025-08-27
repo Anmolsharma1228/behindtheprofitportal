@@ -11,7 +11,7 @@ export const Navbar = () => {
   return (
     <header className="bg-gradient-to-r from-black via-[#0f172a] to-black w-full fixed top-0 right-0 left-0 mx-auto z-10 h-[100px] md:h-[120px] shadow-md">
       <MarqueeHeadline />
-      <nav className="flex justify-between items-center mx-4">
+      <nav className="flex justify-between items-center mx-4 mt-[-20px]">
         {/* Logo */}
 <div className="flex items-center ml-[-28px]">
   <NavLink to="/">

@@ -39,7 +39,7 @@ export const Marquees = () => {
 export const MarqueeHeadline = () => {
   return (
     <Marquee gradient={false} speed={50}>
-      <p className="text-[20px] text-white text-center">
+      <p className="text-[20px] text-white text-center mt-3">
         Welcome to behind the profit: the home of smart traders.
       </p>
     </Marquee>
