@@ -4,6 +4,7 @@ import stock from '../assets/Images/stock2.avif';
 import WhyUs from '../components/WhyUs';
 import Service from '../components/Service';
 import { Marquees } from '../components/Marquees';
+import ContactUs from '../components/ContactUs';
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 40 },
@@ -64,6 +65,10 @@ const Home = () => {
         {/* Why Us Section */}
         <section className="bg-neutral-950 py-12">
           <WhyUs />
+        </section>
+        {/* Contact Us  */}
+        <section className="bg-gray-900 py-12">
+          <ContactUs />
         </section>
       </main>
     </div>

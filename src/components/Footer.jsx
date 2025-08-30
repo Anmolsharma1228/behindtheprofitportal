@@ -16,10 +16,8 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10 border-b border-gray-800 pb-10">
           {/* Logo & About */}
           <div>
-            {/* <h2 className="text-2xl font-bold text-yellow-400">
-              BehindTheProfit
-            </h2> */}
-            <img src={logo2} className="ml-[-28px] md:ml-[-70px] w-[100px] sm:w-[130px] h-auto object-contain" />
+          
+            <img src={logo2} className="ml-[-28px] md:ml-[-30px] w-[100px] sm:w-[130px] h-auto object-contain" />
             <p className="mt-4 text-sm text-gray-400 leading-relaxed">
               Your trusted source for{" "}
               <span className="text-green-400">market updates</span>,{" "}
@@ -89,7 +87,7 @@ export default function Footer() {
           {/* Contact Us */}
           <div>
             <h3 className="text-lg font-semibold text-white mb-4">
-              Contact Us
+              Contact Info
             </h3>
             <div className="space-y-3 text-sm">
               <p className="flex items-center gap-2">
